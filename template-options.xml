@@ -37,7 +37,7 @@
         </field>
         <field name="styletips" type="tips" tab="style" panel_position="right" show_label="false"/>
         
-        <field name="gridsystem" type="selectbox" default="" label="Grid System" isbodyclass="false" setbyurl="true"
+        <field name="gridsystem" type="selectbox" default="-fluid" label="Grid System" isbodyclass="false" setbyurl="true"
                setinsession="true" setbysession="true" setincookie="true" setbycookie="true">
             <option value="">Fixed Grid</option>
             <option value="-fluid">Responsive - Fluid Grid</option>
@@ -47,11 +47,11 @@
 
         <field name="lesscompiler" type="toggle" default="0" label="Include LESS"/>
         
-        <field name="docscss" type="toggle" default="0" label="Include Docs.Css"/>
+        <field name="docscss" type="toggle" default="1" label="Include Docs.Css"/>
         
-        <field name="minified" type="toggle" default="0" label="Minified Css"/>
+        <field name="minified" type="toggle" default="1" label="Minified Css"/>
         
-        <field name="jquery" type="toggle" default="0" label="Include JQuery"/>
+        <field name="jquery" type="toggle" default="1" label="Include JQuery"/>
         
         <field name="cssstyle" type="selectbox" default="style1" label="CSS_STYLE" isbodyclass="true" setbyurl="true"
                setinsession="true" setbysession="true" setincookie="true" setbycookie="true">
@@ -75,7 +75,7 @@
         <field name="linkcolor" type="colorchooser" default="#136AA5" label="LINK_COLOR" setinsession="true"
                setbysession="true" setincookie="true" setbycookie="true"/>
 
-		<field name="awesome" type="toggle" default="0" label="Include Font-Awesome"/>
+		<field name="awesome" type="toggle" default="1" label="Include Font-Awesome"/>
 
         <!--<fields name="webfonts" type="chain" label="WEBFONTS">
             <field name="enabled" type="toggle" default="0" label="SHOW"/>
@@ -183,7 +183,7 @@
         <fields name="copyright" type="chain" label="COPYRIGHT">
             <field name="enabled" type="toggle" default="1" label="SHOW"/>
             <field name="position" type="position" translation="false" default="copyright" label="POSITION"/>
-            <field name="text" type="text" default="Designed by Prieco S.A." label="" class="text-long"/>
+            <field name="text" type="text" default="Developed by Prieco S.A." label="" class="text-long"/>
         </fields>
 
         <!--
