@@ -1,15 +1,15 @@
 <?php
-/* ------------------------------------------------------------------------
-  # Jootstrap - Twitter's Bootstrap for Joomla (with RocketTheme's Gantry administration)
-  # ------------------------------------------------------------------------
-  # author    Prieco S.A.
-  # copyright Copyright (C) 2012 Prieco.com. All Rights Reserved.
-  # @license - http://http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
-  # Websites: http://www.prieco.com
-  # Technical Support:  Forum - http://www.prieco.com/en/forum/index.html
-  ------------------------------------------------------------------------- */
-
-defined('GANTRY_VERSION') or die();
+/**
+ * @package     Extly.Templates
+ * @subpackage  JBootstrap - Twitter's Bootstrap for Joomla (with RocketTheme's Gantry administration)
+ * 
+ * @author      Prieco S.A. <support@extly.com>
+ * @copyright   Copyright (C) 2007 - 2012 Prieco, S.A. All rights reserved.
+ * @license     http://http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL 
+ * @link        http://www.extly.com http://support.extly.com http://www.prieco.com
+ */
+// No direct access
+defined('GANTRY_VERSION') or die('Restricted access');
 
 gantry_import('core.gantrylayout');
 
@@ -18,18 +18,23 @@ gantry_import('core.gantrylayout');
  * @package gantry
  * @subpackage html.layouts
  */
-class GantryLayoutDoc_Tag extends GantryLayout {
-    var $render_params = array(
-        'classes'       =>  null
-    );
-    function render($params = array()){
-        global $gantry;
+class GantryLayoutDoc_Tag extends GantryLayout
+{
 
-        $fparams = $this-> _getParams($params);
+	var $render_params = array(
+		'classes' => null
+	);
 
-    ob_start();
-	//XHTML LAYOUT
-?><?php if(strlen($fparams->classes) > 0):?>class="<?php echo $fparams->classes; ?>"<?php endif;?><?php
-	return ob_get_clean();
-    }
+	function render($params = array())
+	{
+		global $gantry;
+
+		$fparams = $this->_getParams($params);
+
+		ob_start();
+		//XHTML LAYOUT
+		?><?php if (strlen($fparams->classes) > 0): ?>class="<?php echo $fparams->classes; ?>"<?php endif; ?><?php
+		return ob_get_clean();
+	}
+
 }

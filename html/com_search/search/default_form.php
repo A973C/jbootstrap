@@ -1,16 +1,18 @@
 <?php
-/* ------------------------------------------------------------------------
-  # Jootstrap - Twitter's Bootstrap for Joomla (with RocketTheme's Gantry administration)
-  # ------------------------------------------------------------------------
-  # author    Prieco S.A.
-  # copyright Copyright (C) 2012 Prieco.com. All Rights Reserved.
-  # @license - http://http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
-  # Websites: http://www.prieco.com
-  # Technical Support:  Forum - http://www.prieco.com/en/forum/index.html
-  ------------------------------------------------------------------------- */
 
-// no direct access
-defined('_JEXEC') or die;
+/**
+ * @package     Extly.Templates
+ * @subpackage  JBootstrap - Twitter's Bootstrap for Joomla (with RocketTheme's Gantry administration)
+ * 
+ * @author      Prieco S.A. <support@extly.com>
+ * @copyright   Copyright (C) 2007 - 2012 Prieco, S.A. All rights reserved.
+ * @license     http://http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL 
+ * @link        http://www.extly.com http://support.extly.com http://www.prieco.com
+ */
+
+// No direct access
+defined('_JEXEC') or die('Restricted access');
+
 $lang = JFactory::getLanguage();
 $upper_limit = $lang->getUpperLimitSearchWord();
 ?>

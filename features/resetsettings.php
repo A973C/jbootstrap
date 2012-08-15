@@ -1,35 +1,33 @@
 <?php
-/* ------------------------------------------------------------------------
-  # Jootstrap - Twitter's Bootstrap for Joomla (with RocketTheme's Gantry administration)
-  # ------------------------------------------------------------------------
-  # author    Prieco S.A.
-  # copyright Copyright (C) 2012 Prieco.com. All Rights Reserved.
-  # @license - http://http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
-  # Websites: http://www.prieco.com
-  # Technical Support:  Forum - http://www.prieco.com/en/forum/index.html
-  ------------------------------------------------------------------------- */
-
-defined('JPATH_BASE') or die();
+/**
+ * @package     Extly.Templates
+ * @subpackage  JBootstrap - Twitter's Bootstrap for Joomla (with RocketTheme's Gantry administration)
+ * 
+ * @author      Prieco S.A. <support@extly.com>
+ * @copyright   Copyright (C) 2007 - 2012 Prieco, S.A. All rights reserved.
+ * @license     http://http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL 
+ * @link        http://www.extly.com http://support.extly.com http://www.prieco.com
+ */
+// No direct access
+defined('JPATH_BASE') or die('Restricted access');
 
 gantry_import('core.gantryfeature');
 
-/**
- * @package     gantry
- * @subpackage  features
- */
-class GantryFeatureResetSettings extends GantryFeature {
+class GantryFeatureResetSettings extends GantryFeature
+{
 
-    var $_feature_name = 'resetsettings';
+	var $_feature_name = 'resetsettings';
 
-    function render($position = "") {
-        global $gantry;
-        ob_start();
-        ?>
-        <div id="gantry-resetsettings">
-            [ <a href="<?php echo JROUTE::_($gantry->addQueryStringParams($gantry->getCurrentUrl($gantry->_setbyurl), array('reset-settings' => ''))); ?>"><?php echo $this->get('text'); ?></a> ]
-        </div>
-        <?php
-        return ob_get_clean();
-    }
+	function render($position = "")
+	{
+		global $gantry;
+		ob_start();
+		?>
+		<div id="gantry-resetsettings">
+			[ <a href="<?php echo JROUTE::_($gantry->addQueryStringParams($gantry->getCurrentUrl($gantry->_setbyurl), array('reset-settings' => ''))); ?>"><?php echo $this->get('text'); ?></a> ]
+		</div>
+		<?php
+		return ob_get_clean();
+	}
 
 }

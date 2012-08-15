@@ -1,16 +1,16 @@
 <?php
-/* ------------------------------------------------------------------------
-  # Jootstrap - Twitter's Bootstrap for Joomla (with RocketTheme's Gantry administration)
-  # ------------------------------------------------------------------------
-  # author    Prieco S.A.
-  # copyright Copyright (C) 2012 Prieco.com. All Rights Reserved.
-  # @license - http://http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
-  # Websites: http://www.prieco.com
-  # Technical Support:  Forum - http://www.prieco.com/en/forum/index.html
-  ------------------------------------------------------------------------- */
 
-// no direct access
-defined('_JEXEC') or die('Restricted access');
+/**
+ * @package     Extly.Templates
+ * @subpackage  JBootstrap - Twitter's Bootstrap for Joomla (with RocketTheme's Gantry administration)
+ * 
+ * @author      Prieco S.A. <support@extly.com>
+ * @copyright   Copyright (C) 2007 - 2012 Prieco, S.A. All rights reserved.
+ * @license     http://http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL 
+ * @link        http://www.extly.com http://support.extly.com http://www.prieco.com
+ */
+// No direct access
+defined('JPATH_BASE') or die('Restricted access');
 
 /**
  * This is a file to add template specific chrome to pagination rendering.
@@ -61,17 +61,18 @@ defined('_JEXEC') or die('Restricted access');
  *
  * NOTE: If you override pagination_item_active OR pagination_item_inactive you MUST override them both
  */
-function pagination_list_footer($list) {
-    $html = "<div class=\"list-footer\">\n";
+function pagination_list_footer($list)
+{
+	$html = "<div class=\"list-footer\">\n";
 
-    $html .= "\n<div class=\"limit\">" . JText::_('Display Num') . $list['limitfield'] . "</div>";
-    $html .= $list['pageslinks'];
-    $html .= "\n<div class=\"counter pager\">" . $list['pagescounter'] . "</div>";
+	$html .= "\n<div class=\"limit\">" . JText::_('Display Num') . $list['limitfield'] . "</div>";
+	$html .= $list['pageslinks'];
+	$html .= "\n<div class=\"counter pager\">" . $list['pagescounter'] . "</div>";
 
-    $html .= "\n<input type=\"hidden\" name=\"limitstart\" value=\"" . $list['limitstart'] . "\" />";
-    $html .= "\n</div>";
+	$html .= "\n<input type=\"hidden\" name=\"limitstart\" value=\"" . $list['limitstart'] . "\" />";
+	$html .= "\n</div>";
 
-    return $html;
+	return $html;
 }
 
 /* <div class="pagination">
@@ -85,37 +86,41 @@ function pagination_list_footer($list) {
   </ul>
   </div> */
 
-function pagination_list_render($list) {
-    // Initialize variables
-    $html = "<div><ul>";
-    $html .= $list['start']['data'];
-    $html .= $list['previous']['data'];
+function pagination_list_render($list)
+{
+	// Initialize variables
+	$html = "<div><ul>";
+	$html .= $list['start']['data'];
+	$html .= $list['previous']['data'];
 
-    foreach ($list['pages'] as $page) {
-        /*if ($page['data']['active']) {
-            $html .= '';
-        }*/
+	foreach ($list['pages'] as $page)
+	{
+		/* if ($page['data']['active']) {
+		  $html .= '';
+		  } */
 
-        $html .= $page['data'];
+		$html .= $page['data'];
 
-        /*if ($page['data']['active']) {
-            $html .= '';
-        }*/
-    }
+		/* if ($page['data']['active']) {
+		  $html .= '';
+		  } */
+	}
 
-    $html .= $list['next']['data'];
-    $html .= $list['end']['data'];
+	$html .= $list['next']['data'];
+	$html .= $list['end']['data'];
 
-    $html .= "</ul></div>";
-    return $html;
+	$html .= "</ul></div>";
+	return $html;
 }
 
-function pagination_item_active(&$item) {
-    return "<a href=\"" . $item->link . "\" title=\"" . $item->text . "\">" . $item->text . "</a>";
+function pagination_item_active(&$item)
+{
+	return "<a href=\"" . $item->link . "\" title=\"" . $item->text . "\">" . $item->text . "</a>";
 }
 
-function pagination_item_inactive(&$item) {
-    return "<li class=\"disabled\"><a href=\"#\">" . $item->text . "</a></li>";
+function pagination_item_inactive(&$item)
+{
+	return "<li class=\"disabled\"><a href=\"#\">" . $item->text . "</a></li>";
 }
 
 ?>
