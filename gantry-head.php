@@ -1,16 +1,14 @@
 <?php
-/* ------------------------------------------------------------------------
-  # Jootstrap - Twitter's Bootstrap for Joomla (with RocketTheme's Gantry administration)
-  # ------------------------------------------------------------------------
-  # author    Prieco S.A.
-  # copyright Copyright (C) 2012 Prieco.com. All Rights Reserved.
-  # @license - http://http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
-  # Websites: http://www.prieco.com
-  # Technical Support:  Forum - http://www.prieco.com/en/forum/index.html
-  ------------------------------------------------------------------------- */
-
-
-// no direct access
+/**
+ * @package     Extly.Templates
+ * @subpackage  JBootstrap - Twitter's Bootstrap for Joomla (with RocketTheme's Gantry administration)
+ * 
+ * @author      Prieco S.A. <support@extly.com>
+ * @copyright   Copyright (C) 2007 - 2012 Prieco, S.A. All rights reserved.
+ * @license     http://http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL 
+ * @link        http://www.extly.com http://support.extly.com http://www.prieco.com
+ */
+// No direct access
 defined('_JEXEC') or die('Restricted index access');
 
 $jspath = $this->baseurl . '/templates/' . $this->template . '/js';
@@ -29,21 +27,33 @@ $docscss = $gantry->get('docscss');
 $minified = $gantry->get('minified');
 
 $jquery = $gantry->get('jquery');
+
+$awesome = $gantry->get('awesome');
+
 $gantry->displayHead();
 
 $cssfiles = ($minified ? array('bootstrap.min.css') : array('bootstrap.css'));
-if ($gridrows == 12) {
-    $cssfiles[] = ($minified ? 'bootstrap-responsive.min.css' : 'bootstrap-responsive.css');
+if ($gridrows == 12)
+{
+	$cssfiles[] = ($minified ? 'bootstrap-responsive.min.css' : 'bootstrap-responsive.css');
 }
 
-if ($responsive) {
-    echo "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n";
+if ($responsive)
+{
+	echo "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n";
 }
 
 if ($docscss)
-    $cssfiles[] = ($minified ? 'docs.min.css' : 'docs.css');
+{
+	$cssfiles[] = ($minified ? 'docs.min.css' : 'docs.css');
+}
 
-//bootstrap files should be included before *-override.css (priority < 5)
+if ($awesome)
+{
+	$cssfiles[] = ($minified ? 'font-awesome.min.css' : 'font-awesome.css');
+}
+
+// Bootstrap files should be included before *-override.css (priority < 5)
 $gantry->addStyles($cssfiles, 4);
 ?>
 
@@ -57,7 +67,8 @@ $gantry->addStyles($cssfiles, 4);
 <link rel="apple-touch-icon" sizes="72x72" href="<?php echo $imgpath; ?>/apple-touch-icon-ipad.png"/>
 <link rel="apple-touch-icon" sizes="114x114" href="<?php echo $imgpath; ?>/apple-touch-icon-114x114.png"/>
 <?php
-if ($lesscompiler) {
-    echo "<link rel=\"stylesheet/less\" type=\"text/css\" href=\"" . $lesspath . "/styles.less\"/>\n";
-    echo "<script src=\"" . $jspath . "/less.min.js\" type=\"text/javascript\"></script>";
+if ($lesscompiler)
+{
+	echo "<link rel=\"stylesheet/less\" type=\"text/css\" href=\"" . $lesspath . "/styles.less\"/>\n";
+	echo "<script src=\"" . $jspath . "/less.min.js\" type=\"text/javascript\"></script>";
 }

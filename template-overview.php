@@ -1,10 +1,10 @@
 <img src="<?php echo $gantry->templateUrl . '/template_thumbnail.png'; ?>" width="206" height="140" class="template-preview" alt=""/>
 <h1><?php echo $gantry->get('template_full_name'); ?> <span>v<?php echo $gantry->_template->getVersion(); ?></span></h1>
-<p>Jootstrap - Twitter's Bootstrap for Joomla (with RocketTheme's Gantry administration).</p>
+<p>JBootstrap - Twitter's Bootstrap for Joomla (with RocketTheme's Gantry administration).</p>
 
-<h2>Overview of the Jootstrap</h2>
+<h2>Overview of the JBootstrap</h2>
 
-<p><b>Jootstrap</b> is a new kind of Joomla template. We've been working with Joomla since 2007, and we love to work and extend it. In the other hand, we've been following the last developments around Html5: Boilerplate, Bootstrap, initializr, KendoUI, Mustache, etc.<p>
+<p><b>JBootstrap</b> is a new kind of Joomla template. We've been working with Joomla since 2007, and we love to work and extend it. In the other hand, we've been following the last developments around Html5: Boilerplate, Bootstrap, initializr, KendoUI, Mustache, etc.<p>
    
 <p></p>
 
@@ -47,4 +47,4 @@
     Themes and distills that knowledge into a single super-flexible framework that is easy to configure, simple to
     extend, and powerful enough to handle anything we want to throw at it.</p>
 
-<p>Get more help and find out more at <a href="http://www.jootstrap.com>http://www.jootstrap.com</a></p>
+<p>Get more help and find out more at <a href="http://www.jbootstrap.com>http://www.jbootstrap.com</a></p>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
 <extension version="1.6.0" type="template" method="upgrade" client="site">
-    <name>jootstrap</name>
+    <name>jbootstrap</name>
     <author>Prieco S.A.</author>
     <creationDate>March 10, 2012</creationDate>
     <copyright>(C) 2007 - 2012 Prieco, S.A. All rights reserved.</copyright>
@@ -9,7 +9,7 @@
     <authorEmail>support@prieco.com</authorEmail>
     <authorUrl>http://www.prieco.com</authorUrl>
     <version>0.5rc</version>
-    <description>Jootstrap - Twitter's Bootstrap for Joomla (with RocketTheme's Gantry administration)</description>
+    <description>JBootstrap - Twitter's Bootstrap for Joomla (with RocketTheme's Gantry administration)</description>
     <files>
         <filename>index.php</filename>
         <filename>component.php</filename>
@@ -25,6 +25,7 @@
         <folder>css</folder>
         <folder>custom</folder>
         <folder>features</folder>
+		<folder>font</folder>
         <folder>html</folder>
         <folder>images</folder>
         <folder>img</folder>
@@ -110,11 +111,11 @@
         <position>debug</position>
     </positions>
     <languages folder="language">
-        <language tag="en-GB">en-GB/en-GB.tpl_jootstrap.ini</language>
+        <language tag="en-GB">en-GB/en-GB.tpl_jbootstrap.ini</language>
     </languages>
 	<config>
         <fields name="params">
-            <fieldset name="base" addfieldpath="/templates/jootstrap/fields">
+            <fieldset name="base" addfieldpath="/templates/jbootstrap/fields">
                 <field name="master" type="hidden" value="true" default="true"/>
                 <field type="spacer" label="This template needs the &lt;a href='http://www.gantry-framework.org'&gt;Gantry Template Framework&lt;/a&gt;.  Please download and install from &lt;a href='http://www.gantry-framework.org'&gt;here&lt;/a&gt;"/>
             </fieldset>

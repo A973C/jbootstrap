@@ -19,7 +19,7 @@
         <field name="master" type="hidden" value="false" default="true"/>
         <field name="current_id" type="hidden" value="false" default="true"/>
         <field name="gantry" type="gantry" value="" panel_position="hiddens"/>
-        <field name="template_full_name" type="hidden" default="Jootstrap"/>
+        <field name="template_full_name" type="hidden" default="JBootstrap"/>
         <!--<field name="diagnostic" type="diagnostic" panel_position="right" show_label="false" />-->
         <!--<field name="overviewtips" type="tips" tab="overview" panel_position="right" show_label="false"/>-->
         <field name="grid_system" type="hidden" default="12"/>
@@ -74,6 +74,8 @@
 
         <field name="linkcolor" type="colorchooser" default="#136AA5" label="LINK_COLOR" setinsession="true"
                setbysession="true" setincookie="true" setbycookie="true"/>
+
+		<field name="awesome" type="toggle" default="0" label="Include Font-Awesome"/>
 
         <!--<fields name="webfonts" type="chain" label="WEBFONTS">
             <field name="enabled" type="toggle" default="0" label="SHOW"/>
@@ -231,7 +233,7 @@
             <html><![CDATA[
 					<h2>Menu Settings</h2>
 
-					<p>The Navbar settings available in this interface allow you to control the style and functionality of the Navbar custom theme which is a powerful feature included in Jootstrap. For more detailed information on each settings and how it is being used, please refer to the help information below.</p>
+					<p>The Navbar settings available in this interface allow you to control the style and functionality of the Navbar custom theme which is a powerful feature included in JBootstrap. For more detailed information on each settings and how it is being used, please refer to the help information below.</p>
 					]]>
             </html>
         </field>
@@ -241,7 +243,7 @@
             <field name="type" type="selectbox" selector="true" default="navbarmenu" label="TYPE" isbodyclass="true" setbyurl="true" setinsession="true" setbysession="true" setincookie="true" setbycookie="true"/>
             <fields type="set" name="navbarmenu" label="NAVBAR">
                 <field name="menutype" type="menus" default="mainmenu" label="MENU_SELECT" />
-                <field name="theme" type="hidden" default="jootstrap-navbarmenu"/>
+                <field name="theme" type="hidden" default="jbootstrap-navbarmenu"/>
                 <field name="cache" type="hidden" default="0"/>
                 <field name="module_cache" type="hidden" default="1"/>
 
@@ -350,7 +352,6 @@
         </fields>
     </fieldset>
     
-<!--    
     <fieldset name="mobile" label="MOBILE">
 
         <field name="iphonesettings" type="html" panel_position="right" show_label="false">
@@ -580,15 +581,6 @@
             <field name="time" type="text" default="900" label="CACHE_TIME" class="text-short" setinoverride="false"/>
         </fields>
 
-        <fields name="gzipper" type="chain" label="GANTRY_GZIPPER" setinoverride="false">
-            <field name="enabled" type="toggle" default="0" label="ENABLED" setinoverride="false"/>
-            <field name="time" type="text" default="600" label="CACHE_TIME" class="text-short" setinoverride="false"/>
-            <field name="expirestime" type="text" default="1440" label="EXPIRES_TIME" class="text-short"
-                   setinoverride="false"/>
-            <field name="stripwhitespace" type="toggle" default="1" label="STRIP_WHITESPACE"
-                   setinoverride="false"/>
-        </fields>
-
 <!--
         <fields name="inputstyling" type="chain" label="INPUT_STYLING">
             <field name="enabled" type="toggle" default="0" label="ENABLED"/>
@@ -605,11 +597,6 @@
         <field name="buildspans-enabled" type="toggle" default="1" label="TITLESPANS"/>
 
         <field name="pagesuffix-enabled" type="toggle" default="0" label="PAGESUFFIX"/>
-
-        <fields name="inactive" type="chain" label="INACTIVE" setinoverride="false">
-            <field name="enabled" type="toggle" default="1" label="ENABLED" setinoverride="false"/>
-            <field name="menuitem" type="menuitem" label="SELECT_MENU_ITEM" setinoverride="false"/>
-        </fields>
 
     </fieldset>
     <fieldset name="assignment" label="ASSIGNMENTS">

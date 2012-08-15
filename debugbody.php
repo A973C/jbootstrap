@@ -1,15 +1,14 @@
 <?php
-/* ------------------------------------------------------------------------
-  # Jootstrap - Twitter's Bootstrap for Joomla (with RocketTheme's Gantry administration)
-  # ------------------------------------------------------------------------
-  # author    Prieco S.A.
-  # copyright Copyright (C) 2012 Prieco.com. All Rights Reserved.
-  # @license - http://http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
-  # Websites: http://www.prieco.com
-  # Technical Support:  Forum - http://www.prieco.com/en/forum/index.html
-  ------------------------------------------------------------------------- */
-
-// no direct access
+/**
+ * @package     Extly.Templates
+ * @subpackage  JBootstrap - Twitter's Bootstrap for Joomla (with RocketTheme's Gantry administration)
+ * 
+ * @author      Prieco S.A. <support@extly.com>
+ * @copyright   Copyright (C) 2007 - 2012 Prieco, S.A. All rights reserved.
+ * @license     http://http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL 
+ * @link        http://www.extly.com http://support.extly.com http://www.prieco.com
+ */
+// No direct access
 defined('_JEXEC') or die('Restricted index access');
 
 $gridsize = JRequest::getInt('gridsize', 12);
@@ -73,7 +72,7 @@ $imgpath = $this->baseurl . '/templates/' . $this->template . '/images';
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
         <jdoc:include type="head" />
-        <?php $gantry->addStyles(array('bootstrap.css', 'bootstrap-responsive.css')); ?>
+		<?php $gantry->addStyles(array('bootstrap.css', 'bootstrap-responsive.css')); ?>
 
         <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
@@ -86,7 +85,7 @@ $imgpath = $this->baseurl . '/templates/' . $this->template . '/images';
     </head>
     <body id="debug">
 
-        <?php echo $gantry->debugMainbody('debugmainbody', 'sidebar', 'standard', $gridsize); ?>
+		<?php echo $gantry->debugMainbody('debugmainbody', 'sidebar', 'standard', $gridsize); ?>
 
         <script src="<?php echo $jspath; ?>/jquery.js"></script>
         <script src="<?php echo $jspath; ?>/bootstrap-transition.js"></script>
