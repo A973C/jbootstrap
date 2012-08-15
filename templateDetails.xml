@@ -2,12 +2,12 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
 <extension version="1.6.0" type="template" method="upgrade" client="site">
     <name>jbootstrap</name>
-    <author>Prieco S.A.</author>
+    <author>Extly.com</author>
     <creationDate>March 10, 2012</creationDate>
     <copyright>(C) 2007 - 2012 Prieco, S.A. All rights reserved.</copyright>
     <license>GNU General Public License version 3 or later; see LICENSE.txt</license>
-    <authorEmail>support@prieco.com</authorEmail>
-    <authorUrl>http://www.prieco.com</authorUrl>
+    <authorEmail>support@extly.com</authorEmail>
+    <authorUrl>http://www.extly.com</authorUrl>
     <version>0.5rc2</version>
     <description>JBootstrap - Twitter's Bootstrap for Joomla (with RocketTheme's Gantry administration)</description>
     <files>
