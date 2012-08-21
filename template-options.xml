@@ -37,7 +37,7 @@
         </field>
         <field name="styletips" type="tips" tab="style" panel_position="right" show_label="false"/>
         
-        <field name="gridsystem" type="selectbox" default="-fluid" label="Grid System" isbodyclass="false" setbyurl="true"
+        <field name="gridsystem" type="selectbox" default="" label="Grid System" isbodyclass="false" setbyurl="true"
                setinsession="true" setbysession="true" setincookie="true" setbycookie="true">
             <option value="">Fixed Grid</option>
             <option value="-fluid">Responsive - Fluid Grid</option>

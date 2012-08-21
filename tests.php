@@ -50,3 +50,4 @@ var_dump(Gantry::countModules('top'));
 
 echo "<h1>Gantry::countModules('top', '-')</h1>";
 var_dump(Gantry::countModules('top', '-'));
+

@@ -1,9 +1,17 @@
 
+/*body#jb-body {
+	padding-top: 40px;
+}*/
+
 #jb-header div.search {text-align:right;}
 
+#jb-header {
+	margin-bottom: 40px;
+}
+
 #jb-logo {
-    background: url("../images/logo.png") no-repeat scroll #193867 64px 70%;
-    min-height: 160px;
+    background: url("../images/logo.png") no-repeat scroll #193867 50% 10px;
+    min-height: 90px;
     width: 100%;
     display: block;
 }

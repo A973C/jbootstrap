@@ -33,13 +33,10 @@ $awesome = $gantry->get('awesome');
 $gantry->displayHead();
 
 $cssfiles = ($minified ? array('bootstrap.min.css') : array('bootstrap.css'));
-if ($gridrows == 12)
-{
-	$cssfiles[] = ($minified ? 'bootstrap-responsive.min.css' : 'bootstrap-responsive.css');
-}
 
 if ($responsive)
 {
+	$cssfiles[] = ($minified ? 'bootstrap-responsive.min.css' : 'bootstrap-responsive.css');	
 	echo "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n";
 }
 
