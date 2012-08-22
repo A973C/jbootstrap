@@ -16,38 +16,66 @@ $imgpath = $this->baseurl . '/templates/' . $this->template . '/images';
 $lesspath = $this->baseurl . '/templates/' . $this->template . '/css/less';
 
 $gridsystem = $gantry->get('gridsystem');
-$gridrows = ($gridsystem == '' ? 9 : 12);
-
 $responsive = $gantry->get('responsive');
-
-$lesscompiler = $gantry->get('lesscompiler');
-
-$docscss = $gantry->get('docscss');
-
 $minified = $gantry->get('minified');
-
 $jquery = $gantry->get('jquery');
-
 $awesome = $gantry->get('awesome');
+$googlecodeprettify = $gantry->get('googlecodeprettify');
+$docscss = $gantry->get('docscss');
+$lesscompiler = $gantry->get('lesscompiler');
 
 $gantry->displayHead();
 
-$cssfiles = ($minified ? array('bootstrap.min.css') : array('bootstrap.css'));
+$gridrows = ($gridsystem == '' ? 9 : 12);
 
 if ($responsive)
 {
-	$cssfiles[] = ($minified ? 'bootstrap-responsive.min.css' : 'bootstrap-responsive.css');	
 	echo "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n";
 }
 
-if ($docscss)
-{
-	$cssfiles[] = ($minified ? 'docs.min.css' : 'docs.css');
-}
+$cssfiles = array();
 
-if ($awesome)
+// Compression - None
+if ($minified == 0)
 {
-	$cssfiles[] = ($minified ? 'font-awesome.min.css' : 'font-awesome.css');
+	$cssfiles[] = 'bootstrap.css';
+	if ($responsive)
+	{
+		$cssfiles[] = 'bootstrap-responsive.css';
+	}
+	if ($awesome)
+	{
+		$cssfiles[] = 'font-awesome.css';
+	}
+	if ($googlecodeprettify)
+	{
+		$cssfiles[] = 'prettify.css';
+	}
+	if ($docscss)
+	{
+		$cssfiles[] = 'docs.css';
+	}
+}
+else
+{
+	// Compression - Combination - Combination + Minify
+	$cssfiles[] = 'bootstrap.min.css';
+	if ($responsive)
+	{
+		$cssfiles[] = 'bootstrap-responsive.min.css';
+	}
+	if ($awesome)
+	{
+		$cssfiles[] = 'font-awesome.min.css';
+	}
+	if ($googlecodeprettify)
+	{
+		$cssfiles[] = 'prettify.css';
+	}
+	if ($docscss)
+	{
+		$cssfiles[] = 'docs.min.css';
+	}
 }
 
 // Bootstrap files should be included before *-override.css (priority < 5)

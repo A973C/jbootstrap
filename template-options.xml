@@ -42,17 +42,19 @@
             <option value="">Fixed Grid</option>
             <option value="-fluid">Responsive - Fluid Grid</option>
         </field>
-        
         <field name="responsive" type="toggle" default="1" label="Responsive"/>
-
-        <field name="lesscompiler" type="toggle" default="0" label="Include LESS"/>
-        
-        <field name="docscss" type="toggle" default="1" label="Include Docs.Css"/>
-        
-        <field name="minified" type="toggle" default="1" label="Minified Css"/>
-        
+        <field name="minified" type="selectbox" default="0" label="Compression" isbodyclass="true" setbyurl="true"
+               setinsession="true" setbysession="true" setincookie="true" setbycookie="true">
+            <option value="0">None</option>
+            <option value="1">Combination</option>
+            <option value="2">Combination + Minify</option>
+        </field>
         <field name="jquery" type="toggle" default="1" label="Include JQuery"/>
-        
+		<field name="awesome" type="toggle" default="1" label="Include Font-Awesome"/>
+		<field name="googlecodeprettify" type="toggle" default="1" label="Include google-code-prettify"/>
+        <field name="docscss" type="toggle" default="1" label="Include Docs.Css"/>
+        <field name="lesscompiler" type="toggle" default="0" label="Include LESS"/>               
+
         <field name="cssstyle" type="selectbox" default="style1" label="CSS_STYLE" isbodyclass="true" setbyurl="true"
                setinsession="true" setbysession="true" setincookie="true" setbycookie="true">
             <option value="style1">Style 1</option>
@@ -74,8 +76,6 @@
 
         <field name="linkcolor" type="colorchooser" default="#136AA5" label="LINK_COLOR" setinsession="true"
                setbysession="true" setincookie="true" setbycookie="true"/>
-
-		<field name="awesome" type="toggle" default="1" label="Include Font-Awesome"/>
 
         <!--<fields name="webfonts" type="chain" label="WEBFONTS">
             <field name="enabled" type="toggle" default="0" label="SHOW"/>
