@@ -40,6 +40,11 @@ else
 			</div>
 
 			<?php
+			if ($twitterwidgets)
+			{
+				echo '<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>';
+			}			
+			
 			$jsfiles = array();
 			if ($jquery)
 			{

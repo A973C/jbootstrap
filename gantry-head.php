@@ -21,6 +21,7 @@ $minified = $gantry->get('minified');
 $jquery = $gantry->get('jquery');
 $awesome = $gantry->get('awesome');
 $googlecodeprettify = $gantry->get('googlecodeprettify');
+$twitterwidgets = $gantry->get('twitterwidgets');
 $docscss = $gantry->get('docscss');
 $lesscompiler = $gantry->get('lesscompiler');
 

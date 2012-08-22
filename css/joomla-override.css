@@ -1,13 +1,5 @@
 
-/*body#jb-body {
-	padding-top: 40px;
-}*/
-
 #jb-header div.search {text-align:right;}
-
-#jb-header {
-	margin-bottom: 40px;
-}
 
 #jb-logo {
     background: url("../images/logo.png") no-repeat scroll #193867 50% 10px;
@@ -29,74 +21,12 @@
 #jb-mainbody img[align=left] {float: left;margin: 0 15px 5px 0;}
 #jb-mainbody img[align=right] {float: right;margin: 0 0 5px 15px;}
 
-.navbar .form-search, #jb-top p {
-    margin-top: 5px;
-}
-
-#jb-top .navbar-inner .brand {
-    -moz-transition: all 0.2s linear 0s;
-    color: #000000;
-    float: right;
-    font-weight: bold;
-    margin-left: 20px;
-    padding-left: 0;
-    padding-right: 0;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.125);
-}
-
-.navbar div.custom p {
-    color: #666666;
-}
-
-.navbar div.custom a {
-    color: #999999;
-    float: none;
-    line-height: 19px;
-    text-decoration: none;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-}
-
-.navbar div.custom a:hover {
-    color: #FFFFFF;
-    text-decoration: none;
-    background-color: transparent;
-}    
-
 .jb-article-icons img {
     opacity:0;
 }
 
 #jb-sidebar-a .inputbox, .filters .inputbox {
     width: 160px;
-}
-
-#jb-top .jb-nav > li {
-    display: block;
-    float: left;
-}
-
-#jb-top .jb-nav {
-    display: block;
-    float: left;
-    left: 0;
-    margin: 0 10px 0 0;
-    position: relative;
-}
-
-#jb-top .jb-nav > li > a {
-    display: block;
-    color: #999999;
-    float: none;
-    line-height: 19px;
-    padding: 9px 10px 11px;
-    text-decoration: none;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-}
-
-#jb-top .jb-nav .active > a, #jb-top .jb-nav .active > a:hover {
-    background-color: #222222;
-    color: #FFFFFF;
-    text-decoration: none;
 }
 
 #jb-footer {
@@ -125,4 +55,8 @@
 
 #jb-mainbody article:after {
   clear: both;
+}
+
+#overview, #jb-mainbody .jumbotron {
+padding: 40px;
 }

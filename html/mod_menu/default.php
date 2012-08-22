@@ -12,21 +12,24 @@
 defined('JPATH_BASE') or die('Restricted access');
 
 // Note. It is important to remove spaces between elements.
+
 ?>
 
 <ul class="nav <?php echo $class_sfx; ?>"<?php
 $tag = '';
-if ($params->get('tag_id') != NULL)
+if ($params->get('tag_id') != null)
 {
 	$tag = $params->get('tag_id') . '';
 	echo ' id="' . $tag . '"';
 }
-?>>
-	<?php if ($class_sfx === 'nav-list') : ?>
+?> role="navigation">
+		<?php if ($class_sfx === 'nav-list') : ?>
 		<li></li>
 		<li class="nav-header"><?php echo $module->title; ?></li>
 	<?php endif; ?>
 	<?php
+	
+	$previous_parent = null;
 	foreach ($list as $i => &$item) :
 		$class = '';
 		if ($item->id == $active_id)
@@ -47,7 +50,9 @@ if ($params->get('tag_id') != NULL)
 
 		if ($item->parent)
 		{
-			$class .= 'parent ';
+			$class .= 'parent dropdown ';
+			$previous_parent = $item->id;
+			$item->flink = "#";
 		}
 
 		if (!empty($class))
@@ -73,7 +78,7 @@ if ($params->get('tag_id') != NULL)
 		// The next item is deeper.
 		if ($item->deeper)
 		{
-			echo '<ul class="jb-nav">';
+			echo '<ul class="jb-nav dropdown-menu" role="menu" aria-labelledby="drop' . $previous_parent . '">';
 		}
 		// The next item is shallower.
 		else if ($item->shallower)

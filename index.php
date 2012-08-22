@@ -33,7 +33,7 @@ require_once 'lib/gantry/gantry.php';
 			</div>
 		<?php /** End Drawer * */ endif; ?>
 		<?php /** Begin Top * */ if ($gantry->countModules('top')) : ?>
-			<div id="jb-top" class="navbar navbar-fixed-top">
+			<div id="jb-top" class="navbar navbar-inverse navbar-fixed-top">
 				<div class="navbar-inner">
 					<div class="container<?php echo $gridsystem ?>">
 						<?php echo $gantry->displayModules('top', 'basic', 'basic'); ?>
@@ -132,6 +132,11 @@ require_once 'lib/gantry/gantry.php';
 	<?php /** End Analytics * */ endif; ?>
 
 	<?php
+	if ($twitterwidgets)
+	{
+		echo '<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>';
+	}
+
 	$jsfiles = array();
 	if ($jquery)
 	{

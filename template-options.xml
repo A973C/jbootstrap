@@ -40,7 +40,7 @@
         <field name="gridsystem" type="selectbox" default="" label="Grid System" isbodyclass="false" setbyurl="true"
                setinsession="true" setbysession="true" setincookie="true" setbycookie="true">
             <option value="">Fixed Grid</option>
-            <option value="-fluid">Responsive - Fluid Grid</option>
+            <option value="-fluid">Fluid Grid</option>
         </field>
         <field name="responsive" type="toggle" default="1" label="Responsive"/>
         <field name="minified" type="selectbox" default="0" label="Compression" isbodyclass="true" setbyurl="true"
@@ -52,6 +52,7 @@
         <field name="jquery" type="toggle" default="1" label="Include JQuery"/>
 		<field name="awesome" type="toggle" default="1" label="Include Font-Awesome"/>
 		<field name="googlecodeprettify" type="toggle" default="1" label="Include google-code-prettify"/>
+		<field name="twitterwidgets" type="toggle" default="0" label="Include Twitter Widgets"/>
         <field name="docscss" type="toggle" default="1" label="Include Docs.Css"/>
         <field name="lesscompiler" type="toggle" default="0" label="Include LESS"/>               
 
@@ -245,6 +246,8 @@
                 <field name="menutype" type="menus" default="mainmenu" label="MENU_SELECT" />
                 <field name="theme" type="hidden" default="jbootstrap-navbarmenu"/>
                 <field name="cache" type="hidden" default="0"/>
+				<field name="showAllChildren" type="hidden" default="1"/>
+				<field name="endLevel" type="hidden" default="2"/>
                 <field name="module_cache" type="hidden" default="1"/>
 
                 <field name="mainmenu-position" type="position" translation="false" default="top-b" label="MAINMENU_POS" />
