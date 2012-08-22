@@ -12,6 +12,8 @@
 	<description>JBootstrap - Twitter's Bootstrap for Joomla (with RocketTheme's Gantry administration)</description>
 	<files>
 		<filename>index.php</filename>
+		<filename>index-android.php</filename>
+		<filename>index-iphone.php</filename>
 		<filename>component.php</filename>
 		<filename>debugbody.php</filename>
 		<filename>gantry-head.php</filename>
