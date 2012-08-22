@@ -8,7 +8,7 @@
 	<license>GNU General Public License version 3 or later; see LICENSE.txt</license>
 	<authorEmail>support@extly.com</authorEmail>
 	<authorUrl>http://www.extly.com</authorUrl>
-	<version>0.5rc2</version>
+	<version>0.5.0</version>
 	<description>JBootstrap - Twitter's Bootstrap for Joomla (with RocketTheme's Gantry administration)</description>
 	<files>
 		<filename>index.php</filename>
