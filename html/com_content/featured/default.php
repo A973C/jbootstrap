@@ -21,28 +21,28 @@ JHtml::addIncludePath(JPATH_COMPONENT . DS . 'helpers');
 ?>
 <div class="jb-blog <?php echo $this->pageclass_sfx; ?>">
 
-<?php /** Begin Page Title * */ if ($this->params->get('show_page_heading') != 0) : ?>
+	<?php /** Begin Page Title * */ if ($this->params->get('show_page_heading') != 0) : ?>
 		<h1 class="title">
-		<?php echo $this->escape($this->params->get('page_heading')); ?>
+			<?php echo $this->escape($this->params->get('page_heading')); ?>
 		</h1>
-		<?php /** End Page Title * */ endif; ?>
+	<?php /** End Page Title * */ endif; ?>
 
 	<?php $leadingcount = 0; ?>
 	<?php /** Begin Leading Articles * */ if (!empty($this->lead_items)) : ?>
 		<div class="jb-leading-articles">
-		<?php foreach ($this->lead_items as &$item) : ?>
+			<?php foreach ($this->lead_items as &$item) : ?>
 				<div class="leading-<?php echo $leadingcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>">
-				<?php
-				$this->item = &$item;
-				echo $this->loadTemplate('item');
-				?>
-				</div>
 					<?php
-					$leadingcount++;
+					$this->item = &$item;
+					echo $this->loadTemplate('item');
 					?>
+				</div>
+				<?php
+				$leadingcount++;
+				?>
 			<?php endforeach; ?>
 		</div>
-		<?php /** End Leading Articles * */ endif; ?>
+	<?php /** End Leading Articles * */ endif; ?>
 
 	<?php
 	$introcount = (count($this->intro_items));
@@ -53,39 +53,39 @@ JHtml::addIncludePath(JPATH_COMPONENT . DS . 'helpers');
 			<?php
 			$key = ($key - $leadingcount) + 1;
 			$rowcount = ( ((int) $key - 1) % (int) $this->columns) + 1;
-			$row = $counter / $this->columns;
+			$row = intval($counter / $this->columns);
 
 			if ($rowcount == 1) :
 				?>
 				<div class="row<?php echo $gridsystem ?> items-row cols-<?php echo (int) $this->columns; ?> <?php echo 'row-' . $row; ?>">
-			<?php endif; ?>
+				<?php endif; ?>
 				<div class="span<?php echo 12 / $this->columns; /* JB MAGIC */ ?> item column-<?php echo $rowcount; ?><?php echo $item->state == 0 ? ' system-unpublished"' : null; ?>">
-				<?php
-				$this->item = &$item;
-				echo $this->loadTemplate('item');
-				?>
+					<?php
+					$this->item = &$item;
+					echo $this->loadTemplate('item');
+					?>
 				</div>
-					<?php $counter++; ?>
+				<?php $counter++; ?>
 				<?php if (($rowcount == $this->columns) or ($counter == $introcount)): ?>
 					<span class="row-separator"></span>
 				</div>
-		<?php endif; ?>
+			<?php endif; ?>
 		<?php endforeach; ?>
 	<?php /** End Articles * */ endif; ?>
 
 	<?php /** Begin Article Links * */ if (!empty($this->link_items)) : ?>
 		<div class="jb-article-links nav nav-list">
-		<?php echo $this->loadTemplate('links'); ?>
+			<?php echo $this->loadTemplate('links'); ?>
 		</div>
-		<?php /** End Article Links * */ endif; ?>
+	<?php /** End Article Links * */ endif; ?>
 
 	<?php /** Begin Pagination * */ if ($this->params->def('show_pagination', 2) == 1 || ($this->params->get('show_pagination') == 2 && $this->pagination->get('pages.total') > 1)) : ?>
 		<?php if ($this->params->def('show_pagination_results', 1)) : ?>                
 			<p class="counter pagination-centered"><?php echo $this->pagination->getPagesCounter(); ?></p>
 		<?php endif; ?>    
 		<div class="pagination pagination-centered">
-		<?php echo $this->pagination->getPagesLinks(); ?>
+			<?php echo $this->pagination->getPagesLinks(); ?>
 		</div>
-		<?php /** End Pagination * */ endif; ?>
+	<?php /** End Pagination * */ endif; ?>
 
 </div>

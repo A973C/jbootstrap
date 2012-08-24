@@ -22,24 +22,24 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 
 <div class="jb-blog <?php echo $this->pageclass_sfx; ?>">
 
-<?php /* Begin Page Title * */ if ($this->params->get('show_page_heading', 1)) : ?>
+	<?php /* Begin Page Title * */ if ($this->params->get('show_page_heading', 1)) : ?>
 		<h1 class="title">
-		<?php echo $this->escape($this->params->get('page_heading')); ?>
+			<?php echo $this->escape($this->params->get('page_heading')); ?>
 		</h1>
-		<?php /** End Page Title * */ endif; ?>
+	<?php /** End Page Title * */ endif; ?>
 
 	<?php /** Begin Category Title * */ if ($this->params->get('show_category_title', 1) OR $this->params->get('page_subheading')) : ?>
 		<h2 class="title">
-		<?php echo $this->escape($this->params->get('page_subheading')); ?>
+			<?php echo $this->escape($this->params->get('page_subheading')); ?>
 			<?php if ($this->params->get('show_category_title')) : ?>
 				<span class="subheading-category"><?php echo $this->category->title; ?></span>
 			<?php endif; ?>
 		</h2>
-		<?php /** End Category Title * */ endif; ?>
+	<?php /** End Category Title * */ endif; ?>
 
 	<?php /** Begin Description * */ if ($this->params->get('show_description', 1) || $this->params->def('show_description_image', 1)) : ?>
 		<p class="category-desc">
-		<?php if ($this->params->get('show_description_image') && $this->category->getParams()->get('image')) : ?>
+			<?php if ($this->params->get('show_description_image') && $this->category->getParams()->get('image')) : ?>
 				<img src="<?php echo $this->category->getParams()->get('image'); ?>"/>
 			<?php endif; ?>
 			<?php if ($this->params->get('show_description') && $this->category->description) : ?>
@@ -52,19 +52,19 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 <?php $leadingcount = 0; ?>
 <?php /** Begin Leading Articles * */ if (!empty($this->lead_items)) : ?>
 	<div class="jb-leading-articles">
-	<?php foreach ($this->lead_items as &$item) : ?>
+		<?php foreach ($this->lead_items as &$item) : ?>
 			<div class="leading-<?php echo $leadingcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>">
-			<?php
-			$this->item = &$item;
-			echo $this->loadTemplate('item');
-			?>
-			</div>
 				<?php
-				$leadingcount++;
+				$this->item = &$item;
+				echo $this->loadTemplate('item');
 				?>
+			</div>
+			<?php
+			$leadingcount++;
+			?>
 		<?php endforeach; ?>
 	</div>
-	<?php /** End Leading Articles * */ endif; ?>
+<?php /** End Leading Articles * */ endif; ?>
 
 <?php
 $introcount = (count($this->intro_items));
@@ -78,7 +78,7 @@ $counter = 0;
 		<?php
 		$key = ($key - $leadingcount) + 1;
 		$rowcount = ( ((int) $key - 1) % (int) $this->columns) + 1;
-		$row = $counter / $this->columns;
+		$row = intval($counter / $this->columns);
 
 		if ($jb_row_prev == $row)
 		{
@@ -93,7 +93,7 @@ $counter = 0;
 			?>
 			<div class="<?php echo $jb_row_class; ?> items-row cols-<?php echo (int) $this->columns; ?> <?php echo 'row-' . $row; ?>">
 			<?php endif; ?>
-			<div class="span<?php echo $gridrows / $this->columns; /* JB MAGIC */ ?> item column-<?php echo $rowcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>">
+			<div class="span<?php echo intval($gridrows / $this->columns); /* JB MAGIC */ ?> item column-<?php echo $rowcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>">
 				<?php
 				$this->item = &$item;
 				echo $this->loadTemplate('item');
