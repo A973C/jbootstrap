@@ -15,7 +15,9 @@ require_once(JPATH_LIBRARIES . '/gantry/gantry.php');
 global $gantry;
 $gantry->init();
 $gridsystem = $gantry->get('gridsystem');
-$gridrows = ($gridsystem == '' ? 9 : 12);
+
+// $gridrows = ($gridsystem == '' ? 9 : 12);
+$gridrows = 12;
 
 JHtml::addIncludePath(JPATH_COMPONENT . DS . 'helpers');
 ?>
@@ -59,7 +61,7 @@ JHtml::addIncludePath(JPATH_COMPONENT . DS . 'helpers');
 				?>
 				<div class="row<?php echo $gridsystem ?> items-row cols-<?php echo (int) $this->columns; ?> <?php echo 'row-' . $row; ?>">
 				<?php endif; ?>
-				<div class="span<?php echo 12 / $this->columns; /* JB MAGIC */ ?> item column-<?php echo $rowcount; ?><?php echo $item->state == 0 ? ' system-unpublished"' : null; ?>">
+				<div class="span<?php echo intval($gridrows / $this->columns); /* JB MAGIC */ ?> item column-<?php echo $rowcount; ?><?php echo $item->state == 0 ? ' system-unpublished"' : null; ?>">
 					<?php
 					$this->item = &$item;
 					echo $this->loadTemplate('item');

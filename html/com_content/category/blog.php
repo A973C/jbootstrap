@@ -15,11 +15,12 @@ require_once(JPATH_LIBRARIES . '/gantry/gantry.php');
 global $gantry;
 $gantry->init();
 $gridsystem = $gantry->get('gridsystem');
-$gridrows = ($gridsystem == '' ? 9 : 12);
+
+// $gridrows = ($gridsystem == '' ? 9 : 12);
+$gridrows = 12;
 
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 ?>
-
 <div class="jb-blog <?php echo $this->pageclass_sfx; ?>">
 
 	<?php /* Begin Page Title * */ if ($this->params->get('show_page_heading', 1)) : ?>
