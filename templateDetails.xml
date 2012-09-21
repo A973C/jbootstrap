@@ -9,30 +9,36 @@
 	<authorEmail>support@extly.com</authorEmail>
 	<authorUrl>http://www.extly.com</authorUrl>
 	<version>0.5.0</version>
-	<description>JBootstrap - Twitter's Bootstrap for Joomla (with RocketTheme's Gantry administration)</description>
+	<description>JBootstrap - Twitter's Bootstrap for Joomla (with Gantry administration)</description>
 	<files>
-		<filename>index.php</filename>
-		<filename>index-android.php</filename>
-		<filename>index-iphone.php</filename>
 		<filename>component.php</filename>
 		<filename>debugbody.php</filename>
-		<filename>gantry-head.php</filename>
+		<filename>error.php</filename>
 		<filename>gantry.config.php</filename>
+		<filename>gantry-head.php</filename>
 		<filename>htaccess.txt</filename>
-		<filename>template_thumbnail.png</filename>
-		<filename>templateDetails.xml</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>offline.php</filename>		
 		<filename>template-options.xml</filename>
 		<filename>template-overview.php</filename>
+		<filename>template-thumb-big.png</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
 		<filename>tests.php</filename>
+
 		<folder>admin</folder>
 		<folder>css</folder>
+		<folder>css-compiled</folder>
 		<folder>custom</folder>
 		<folder>features</folder>
-		<folder>fonts</folder>
+		<folder>font</folder>
 		<folder>html</folder>
 		<folder>images</folder>
 		<folder>img</folder>
 		<folder>js</folder>
+		<folder>less</folder>
 		<folder>lib</folder>
 	</files>
 	<positions>
@@ -104,13 +110,6 @@
 		<position>footer-e</position>
 		<position>footer-f</position>
 		<position>copyright</position>
-		<position mobile="true">mobile-drawer</position>
-		<position mobile="true">mobile-top</position>
-		<position mobile="true">mobile-header</position>
-		<position mobile="true">mobile-navigation</position>
-		<position mobile="true">mobile-showcase</position>
-		<position mobile="true">mobile-footer</position>
-		<position mobile="true">mobile-copyright</position>
 		<position>debug</position>
 	</positions>
 	<languages folder="language">

@@ -1,12 +1,12 @@
 <?php
 /**
  * @package     Extly.Templates
- * @subpackage  JBootstrap - Twitter's Bootstrap for Joomla (with RocketTheme's Gantry administration)
+ * @subpackage  JBootstrap - Twitter's Bootstrap for Joomla (with Gantry administration)
  * 
  * @author      Prieco S.A. <support@extly.com>
  * @copyright   Copyright (C) 2007 - 2012 Prieco, S.A. All rights reserved.
  * @license     http://http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL 
- * @link        http://www.extly.com http://support.extly.com http://www.prieco.com
+ *** @link        http://www.extly.com http://support.extly.com
  */
 
 // No direct access
@@ -24,7 +24,7 @@ class GantryFeatureCopyright extends GantryFeature
 		ob_start();
 		?>
 		<div id="copyright"><dl class="dl-horizontal"><dd>
-					<a href="http://www.rockettheme.com/" title="rockettheme.com" id="rocket"></a>
+					<a href="http://www.extly.com/" title="Extly.com" id="extly"></a>
 		<?php echo $this->get('text'); ?>
 				</dd></dl>
 		</div>
