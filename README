@@ -55,6 +55,12 @@ Get more help and find out more at http://www.gantry-framework.org/
 
 --- JBootstrap Changelog --
 
+- Version 0.6 / 2012-09
+
+	Updated to Gantry4
+	Pure LESS implementation
+	Bootstrap 2.1.0
+
 - Version 0.4 / 2012-04-28
 
     Full review
@@ -85,11 +91,13 @@ Get more help and find out more at http://www.gantry-framework.org/
 
 Keep up to date on announcements and more by following Prieco on Twitter, <a href="http://twitter.com/prieco">@prieco</a>.
 
-
 # ------------------------------------------------------------------------
-# author    Prieco S.A.
-# copyright Copyright (C) 2012 Prieco.com. All Rights Reserved.
-# @license - http://http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
-# Websites: http://www.prieco.com
-# Technical Support:  Forum - http://www.prieco.com/en/forum/index.html
--------------------------------------------------------------------------
+# package     Extly.Templates
+# subpackage  JBootstrap - Twitter's Bootstrap for Joomla (with Gantry administration)
+# 
+# author      Prieco S.A. <support@extly.com>
+# copyright   Copyright (C) 2007 - 2012 Prieco, S.A. All rights reserved.
+# license     http://http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL 
+# link        http://www.extly.com http://support.extly.com 
+# ------------------------------------------------------------------------
+ 
